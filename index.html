@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>АвтоЭкспресс — IVECO</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+<!-- шкапка -->
+    <header class="site-header">
+        <div class="container">
+            <div class="topbar">
+                <a class="brand" href="/" aria-label="АвтоЭкспресс">
+                    <img class="brand__logo" src="./icons/logo-white 1.png" alt="АвтоЭкспресс" />
+                </a>
+
+                <form class="search" role="search">
+                    <input class="search__input" type="search" placeholder="" aria-label="Поиск" />
+                    <button class="search__btn" type="submit" aria-label="Найти">
+                        <span class="search__icon">
+                            <img src="./icons/magnifier.png" alt="">
+                        </span>
+                    </button>
+                </form>
+
+                <div class="contacts">
+                    <a class="contacts__item" href="tel:88005007070">
+                        <span class="contacts__ico">
+                            <img src="./icons/phone.png" alt="">
+                        </span>
+                        8 800 500 70 70
+                    </a>
+                    <a class="contacts__item" href="mailto:iveco.parts@sale-mail.ru">
+                        <span class="contacts__ico">
+                            <img src="./icons/mail.png" alt="">
+                        </span>
+                        iveco.parts@sale-mail.ru
+                    </a>
+                </div>
+
+                <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <nav class="nav" aria-label="Основное меню">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="#">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Каталог IVECO</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Поиск по VIN</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">VIN-запрос</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Доставка</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <section class="hero" aria-label="Первый экран">
+            <div class="hero__slides" id="heroSlides">
+                <!-- СЛАЙД 1 -->
+                <article class="hero__slide is-active" style="--bg: url('../img/main-banner1.png');">
+                    <div class="container hero__content">
+                        <div class="hero__text">
+                            <h1 class="hero__title">
+                                <span class="hero__title-accent">ЭКСКЛЮЗИВНЫЙ</span><br>
+                                ДИСТРИБЬЮТОР<br>
+                                IVECO В РОСИИ
+                            </h1>
+                            <p class="hero__subtitle">ПОСТАВКИ ПО ВСЕЙ СТРАНЕ С ГАРАНТИЕЙ ПОДЛИННОСТИ</p>
+
+                            <a class="btn btn--primary" href="#">ПОДРОБНЕЕ</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- СЛАЙД 2 (пример) -->
+                <article class="hero__slide" style="--bg: url('../img/main-banner1.png')">
+                    <div class="container hero__content">
+                        <div class="hero__text">
+                            <h2 class="hero__title">
+                                <span class="hero__title-accent">ОРИГИНАЛЬНЫЕ</span><br>
+                                ЗАПЧАСТИ IVECO
+                            </h2>
+                            <p class="hero__subtitle">БЫСТРАЯ ДОСТАВКА И ПОДДЕРЖКА</p>
+                            <a class="btn btn--primary" href="#">ПОДРОБНЕЕ</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- стрелки -->
+            <button class="hero__arrow hero__arrow--left" type="button" aria-label="Предыдущий слайд">
+                ‹
+            </button>
+            <button class="hero__arrow hero__arrow--right" type="button" aria-label="Следующий слайд">
+                ›
+            </button>
+
+            <!-- точки -->
+            <div class="hero__dots" id="heroDots" aria-label="Переключатели слайдов"></div>
+        </section>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
