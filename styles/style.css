@@ -8,6 +8,23 @@
     --container: 1140px;
 }
 
+/* imports */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+       url('Inter-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+       url('Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* сброс */
 
 * {
@@ -17,6 +34,7 @@
 html,
 body {
     height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 body {
@@ -39,17 +57,20 @@ img {
 .container {
     width: min(var(--container), calc(100% - 40px));
     margin: 0 auto;
+    max-width: 1140px;
 }
 
 /* header */
 .site-header {
     background: #000;
     border-bottom: 1px solid var(--line);
+    font-family: 'Roboto', sans-serif;
 }
 
 .topbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
     padding: 14px 0;
 }
@@ -147,11 +168,14 @@ img {
 .nav__list {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 34px;
     min-height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .nav__link {
@@ -394,4 +418,56 @@ img {
     .hero__subtitle {
         font-size: 13px;
     }
+}
+
+/* section About */
+
+.about{
+  background:#fff;
+  color:#111;
+  padding: 56px 0 70px;
+}
+
+.about__title{
+  margin: 0 0 26px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.about__grid{
+  display:grid;
+  grid-template-columns: 1.05fr 1fr; /* картинка чуть шире */
+  gap: 34px;
+  align-items:center;
+}
+
+.about__media{ }
+.about__img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.about__content p{
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color:#2a2a2a;
+}
+
+.about__btn{
+  margin-top: 10px;
+  width: 170px;
+}
+
+/* адаптив */
+@media (max-width: 900px){
+  .about__grid{
+    grid-template-columns: 1fr;
+  }
+  .about__title{
+    font-size: 26px;
+  }
 }
